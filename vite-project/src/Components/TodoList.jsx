@@ -1,4 +1,5 @@
 
+import TodoDelete from "./TodoDelete"
 
 export default function TodoList({data}){
  
@@ -9,8 +10,8 @@ export default function TodoList({data}){
                 data.map((item)=>(
                 <div style={{display:"flex",marginTop:"1rem", justifyContent:"space-around"}}>
                     <h1>{item}</h1>
-                    <button>Delete</button>
-                    <button>Save</button>
+                 
+                    <TodoDelete data={data} item={item}/>
                 </div>))
             }
         </div>

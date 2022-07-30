@@ -14,6 +14,7 @@ export default function Todo(){
 
     const handleAdd=()=>{
         setData([...data,text])
+        setText("")
     }
  console.log("data",data)
     console.log(text)
