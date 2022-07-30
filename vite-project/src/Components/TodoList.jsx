@@ -10,6 +10,7 @@ export default function TodoList({data}){
                 <div style={{display:"flex",marginTop:"1rem", justifyContent:"space-around"}}>
                     <h1>{item}</h1>
                     <button>Delete</button>
+                    <button>Save</button>
                 </div>))
             }
         </div>
