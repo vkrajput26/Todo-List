@@ -41,7 +41,7 @@ export default function Todo(){
 
     return(
         <Box bg="teal">
-            <Heading mt="1rem" mb="2rem">Todo App</Heading>
+            <Heading mt="1rem" mb="2rem" color="white">Todo App</Heading>
             <Input w="60%" bg="white"  placeholder="Type here!" type={text} value={text} onChange={handleInput} />
         <Button ml="1rem"  bg="blue"  onClick={handleAdd}>Add</Button>
         {
