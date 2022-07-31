@@ -41,16 +41,17 @@ export default function Todo(){
 
     return(
         <Box bg="teal">
-            <Heading>Todo App</Heading>
-            <Input w="60%" bg="white"  placeholder="Write Something!" type={text} value={text} onChange={handleInput} />
+            <Heading mt="1rem" mb="2rem">Todo App</Heading>
+            <Input w="60%" bg="white"  placeholder="Type here!" type={text} value={text} onChange={handleInput} />
         <Button ml="1rem"  bg="blue"  onClick={handleAdd}>Add</Button>
         {
             data.map((el)=>
             <Box key={el.id} bg="blueviolet" color="white" 
             display="flex" justifyContent="space-between" mt="2rem">
+              
                 <Heading>{el.title}</Heading>
-                <Heading >{el.status ? ( <Heading  bg="green"> "DONE"</Heading>) : 
-               <Heading bg="red"> "NOT DONE" </Heading>}</Heading>
+                <Heading >{el.status ? ( <Heading  bg="green"> DONE</Heading>) : 
+               <Heading bg="red"> NOT DONE </Heading>}</Heading>
                 <Button bg="blue"  onClick={()=>handleToggle(el.id)}>Toggle</Button>
                 <Button bg="blue" onClick={()=>handleDelete(el.id)}>Delete</Button>
 
