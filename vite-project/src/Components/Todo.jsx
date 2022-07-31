@@ -1,5 +1,6 @@
 import { useState } from "react"
 import React from "react"
+import {Box,Button,Input,Heading} from "@chakra-ui/react"
 
 import TodoDelete from "./TodoDelete"
 
@@ -39,18 +40,22 @@ export default function Todo(){
 
 
     return(
-        <div>
-            <input type={text} value={text} onChange={handleInput} />
-        <button onClick={handleAdd}>Add</button>
+        <Box bg="teal">
+            <Heading>Todo App</Heading>
+            <Input w="60%" bg="white"  placeholder="Write Something!" type={text} value={text} onChange={handleInput} />
+        <Button ml="1rem"  bg="blue"  onClick={handleAdd}>Add</Button>
         {
-            data.map((el)=><div key={el.id}>
-                <h1>{el.title}</h1>
-                <li>{el.status ? "DONE" : "NOT DONE"}</li>
-                <button onClick={()=>handleToggle(el.id)}>Toggle</button>
-                <button onClick={()=>handleDelete(el.id)}>Delete</button>
+            data.map((el)=>
+            <Box key={el.id} bg="blueviolet" color="white" 
+            display="flex" justifyContent="space-between" mt="2rem">
+                <Heading>{el.title}</Heading>
+                <Heading >{el.status ? ( <Heading  bg="green"> "DONE"</Heading>) : 
+                "NOT DONE"}</Heading>
+                <Button bg="blue"  onClick={()=>handleToggle(el.id)}>Toggle</Button>
+                <Button bg="blue" onClick={()=>handleDelete(el.id)}>Delete</Button>
 
-            </div>)
+            </Box>)
         }
-        </div>
+        </Box>
     )
 }
