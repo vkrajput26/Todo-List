@@ -53,8 +53,8 @@ export default function Todo(){
                 <Heading >{el.status ? ( <Heading  bg="green"> DONE</Heading>) : 
                <Heading bg="red"> NOT DONE </Heading>}</Heading>
                 <Button bg="blue"  onClick={()=>handleToggle(el.id)}>Toggle</Button>
-                <Button bg="blue" onClick={()=>handleDelete(el.id)}>Delete</Button>
-
+              
+                <TodoDelete handleDelete={()=>handleDelete(el.id)}/>
             </Box>)
         }
         </Box>
