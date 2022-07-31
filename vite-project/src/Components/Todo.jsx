@@ -50,7 +50,7 @@ export default function Todo(){
             display="flex" justifyContent="space-between" mt="2rem">
                 <Heading>{el.title}</Heading>
                 <Heading >{el.status ? ( <Heading  bg="green"> "DONE"</Heading>) : 
-                "NOT DONE"}</Heading>
+               <Heading bg="red"> "NOT DONE" </Heading>}</Heading>
                 <Button bg="blue"  onClick={()=>handleToggle(el.id)}>Toggle</Button>
                 <Button bg="blue" onClick={()=>handleDelete(el.id)}>Delete</Button>
 
